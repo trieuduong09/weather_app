@@ -107,4 +107,12 @@
     font-weight: bold;
 }
 
+.date-time {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 

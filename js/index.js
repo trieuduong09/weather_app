@@ -29,3 +29,15 @@ searchInput.addEventListener('change', (e) => {
 
         });
 });
+
+function updateDateTime() {
+    const now = new Date();
+    const days = ['Chủ Nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7'];
+    const day = days[now.getDay()];
+    const date = now.toLocaleDateString('vi-VN');
+    const time = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('current-date').textContent = `${day}, ${date}`;
+    document.getElementById('current-time').textContent = time;                
+}
+updateDateTime();
+setInterval(updateDateTime, 1000);
